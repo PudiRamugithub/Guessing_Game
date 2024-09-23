@@ -1,0 +1,27 @@
+
+ let Uservalue=document.querySelector("#input");
+ let displayText=document.querySelector("#displayText");
+ let number=Math.ceil(Math.random()*100);
+ let clearData=document.querySelector("#input");
+ console.log(number);
+function checkValue(){
+    let guessNumber=parseInt(Uservalue.value);
+    clearData.value='';
+    if(guessNumber<number){
+        displayText.textContent="Too Low!,Try Again";
+        displayText.style.backgroundColor="lightyellow";
+    }
+    else if(guessNumber>number){
+        displayText.textContent="Too High!,Try Again";
+        displayText.style.backgroundColor="red";
+    }
+    else if(guessNumber===number){
+        displayText.textContent="Congrats You Are Correct!!";
+        displayText.style.backgroundColor="green";
+    }
+    else
+    {
+        displayText.textContent="Eneter Valid Input!!";
+        displayText.style.backgroundColor="red";
+    }
+}
